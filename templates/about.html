@@ -1,0 +1,266 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Hakkımızda
+{% endblock %}
+
+{% block body %}
+    <main>
+        <!--? slider Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
+                 data-background="../static/assets/img/hero/about.jpg">
+                <div class="container">
+                    <div class="container text-center">
+                        {% include "includes/flash_message.html" %}
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap">
+                                <h2>Hakkımızda</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                                        <li class="breadcrumb-item"><a href="/about">Hakkımızda</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!--? About Area Start -->
+        <div class="about-low-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <span>Şirketimiz Hakkında</span>
+                                <h2>Değerli Vaktinizden Tasarruf Ettiren Güvenli Lojistik & Taşımacılık Çözümleri!</h2>
+                            </div>
+                            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select
+                                your favorite layouts & elements for cular ts with unlimited ustomization possibilities.
+                                Pixel-perfect replication of the designers is intended.</p>
+                            <p>Brook presents your services with flexible, convefnient and chient anipurpose layouts.
+                                You can select your favorite layouts.</p>
+                            <a href="/about" class="btn">Daha Fazla Bilgi</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <div class="about-font-img">
+                                <img src="../static/assets/img/gallery/about2.png" alt="">
+                            </div>
+                            <div class="about-back-img d-none d-lg-block">
+                                <img src="../static/assets/img/gallery/about1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Area End -->
+        <!--? contact-form start -->
+        <section class="contact-form-area section-bg  pt-115 pb-120 fix"
+                 data-background="../static/assets/img/gallery/section_bg02.jpg">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <!-- Contact wrapper -->
+                    <div class="col-xl-8 col-lg-9">
+                        <div class="contact-form-wrapper">
+                            <!-- From tittle -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Section Tittle -->
+                                    <div class="section-tittle mb-50">
+                                        <span>Fiyat Talep Edin</span>
+                                        <h2>Tahmini Gönderileriniz İçin Fiyat Talep Edin</h2>
+                                        <p>Brook presents your services with flexible, convenient and cdpose layouts.
+                                            You can select your favorite layouts & elements for.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- form -->
+                            <form method="post" class="contact-form">
+                                <div class="row ">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="input-form">
+                                            <input type="text" name="name" placeholder="Adınız">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="input-form">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="input-form">
+                                            <input type="text" name="phone" placeholder="İletişim Numarası">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="select-items">
+                                            <select name="freight_type" id="select1">
+                                                <option value="">Nakliye Türü</option>
+                                                <option value="sehirler_arasi">Şehirler Arası</option>
+                                                <option value="sehir_ici">Şehir İçi</option>
+                                                <option value="deniz">Deniz</option>
+                                                <option value="hava">Hava</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="input-form">
+                                            <input type="text" name="departure_city"
+                                                   placeholder="Nakliye Başlangıç Şehri">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="incoterms" placeholder="Incoterms">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="weight" placeholder="Ağırlık">
+                                        </div>
+                                    </div>
+                                    <!-- Height Width length -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="height" placeholder="Yükseklik">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="width" placeholder="Genişlik">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="length" placeholder="uzunluk">
+                                        </div>
+                                    </div>
+                                    <!-- Radio Button -->
+                                    <div class="col-lg-12">
+                                        <div class="radio-wrapper mb-30 mt-15">
+                                            <label>Ekstra Hizmetler:</label>
+                                            <div class="select-radio">
+                                                <div class="radio">
+                                                    <input id="radio-1" value="Lojistik" name="radio_extra" type="radio"
+                                                           checked="">
+                                                    <label for="radio-1" class="radio-label">Lojistik</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-2" value="Hızlı Teslimat" name="radio_extra"
+                                                           type="radio">
+                                                    <label for="radio-2" class="radio-label">Hızlı Teslimat</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-4" value="Sigorta" name="radio_extra" type="radio">
+                                                    <label for="radio-4" class="radio-label">Sigorta</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-5" value="Paketleme" name="radio_extra"
+                                                           type="radio">
+                                                    <label for="radio-5" class="radio-label">Paketleme</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="col-lg-12">
+                                        <button name="submit" class="submit-btn">Fiyat Talep Et</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-form end -->
+        <!--Team Ara Start -->
+        <div class="team-area section-padding30">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span>Takım Arkadaşlarımız</span>
+                            <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team1.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Muhammed AKPOLAT</a></h3>
+                                    <p>Ulaşım Uzmanı</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team2.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Sefa MIZRAK</a></h3>
+                                    <p>Sevk Operasyonu Koordinatörü</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team3.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Cevad Demir</a></h3>
+                                    <p>Personel Asistanı</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Ara End -->
+    </main>
+{% endblock %}

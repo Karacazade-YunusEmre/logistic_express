@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Anasayfa
+{% endblock title %}
+
+{% block body %}
+    <!--? slider Area Start-->
+    <main>
+        <div class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="container text-center">
+                            {% include "includes/flash_message.html" %}
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="hero__caption">
+                                    <h1>Güvenli & Güvenilir <span>Lojistik</span> Çözümleri!</h1>
+                                </div>
+                                <!--Hero form -->
+                                <form class="search-box" method="post">
+                                    <div class="input-form">
+                                        <input type="text" name="freight_number"
+                                               placeholder="Gönderi Numaranız...">
+                                    </div>
+                                    <div class="search-form">
+                                        <button type="submit" class="btn btn-default" style="margin: 2px">Sorgula</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!--? our info Start -->
+        <div class="our-info-area pt-70 pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-support"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Bizi Herzaman Arayabilirsiniz</p>
+                                <span>+90 (123) 456-7899</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-clock"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Pazar Günleri Kapalı</p>
+                                <span>Pazar Hariç 8.00 - 18.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-place"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Beylikdüzü, 34520</p>
+                                <span>Türkiye, İstanbul</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- our info End -->
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-80">
+                            <span>Hizmetlerimiz</span>
+                            <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-shipped"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/services">Karayolu Taşımacılığı</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-ship"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/services">Deniz Taşımacılığı</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-plane"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/services">Hava Taşımacılığı</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Categories Area End -->
+        <!--Team Ara Start -->
+        <div class="team-area section-padding30">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span>Takım Arkadaşlarımız</span>
+                            <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team1.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Muhammed AKPOLAT</a></h3>
+                                    <p>Ulaşım Uzmanı</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team2.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Sefa MIZRAK</a></h3>
+                                    <p>Sevk Operasyonu Koordinatörü</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-team mb-30 text-center">
+                            <div class="team-img">
+                                <img src="../static/assets/img/gallery/team3.png" alt="">
+                                <div class="team-caption">
+                                    <h3><a href="#">Cevad Demir</a></h3>
+                                    <p>Personel Asistanı</p>
+                                    <!-- Blog Social -->
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Ara End -->
+    </main>
+{% endblock body %}

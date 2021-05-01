@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% from "includes/_formhelpers.html" import render_field %}
+
+{% block title %}
+    Kayıt Ol
+{% endblock %}
+
+{% block body %}
+    <div class="slider-area ">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
+             data-background="../static/assets/img/hero/about.jpg">
+            <div class="container">
+                <div class="row" style="margin: 10px">
+                    <div class="col-md-6">
+                        <form  method="post">
+                            <dl>
+                                {{ render_field(form.name, class="form-control") }}
+                                {{ render_field(form.last_name, class="form-control") }}
+                                {{ render_field(form.username, class="form-control") }}
+                                {{ render_field(form.email, class="form-control") }}
+                                {{ render_field(form.phone_number, class="form-control") }}
+                                {{ render_field(form.password, class="form-control") }}
+                                {{ render_field(form.confirm, class="form-control") }}
+                            </dl>
+                            <button class="btn header-btn">Kayıt Ol</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

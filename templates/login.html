@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% from "includes/_formhelpers.html" import render_field %}
+
+{% block title %}
+    Giriş Yap
+{% endblock %}
+
+{% block body %}
+    <div class="slider-area ">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
+             data-background="../static/assets/img/hero/about.jpg">
+            <div class="container">
+                <div class="container text-center">
+                    {% include "includes/flash_message.html" %}
+                </div>
+                <div class="row" style="margin: 10px">
+                    <div class="col-md-6">
+                        <form method="post">
+                            <dl>
+                                {{ render_field(form.username, class="form-control") }}
+                                {{ render_field(form.password, class="form-control") }}
+                            </dl>
+                            <button type="submit" class="btn header-btn">Giriş Yap</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

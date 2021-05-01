@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Gönderi Sorgula
+{% endblock %}
+
+{% block body %}
+    <!--? slider Area Start-->
+    <main>
+        <div class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="container text-center">
+                            {% include "includes/flash_message.html" %}
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="hero__caption">
+                                    <h1>Güvenli & Güvenilir <span>Lojistik</span> Çözümleri!</h1>
+                                </div>
+                                <!--Hero form -->
+                                <form method="post" class="search-box">
+                                    <div class="input-form">
+                                        {% if request.args.get('search') %}
+                                            <input type="text" name="freight_number"
+                                                   value="{{ session['freight_number'] }}"
+                                                   placeholder="Gönderi Numaranız...">
+                                        {% else %}
+                                            <input type="text" name="freight_number"
+                                                   placeholder="Gönderi Numaranız...">
+                                        {% endif %}
+                                    </div>
+                                    <div class="search-form" style="margin:2px">
+                                        <button type="submit" class="btn btn-default">Sorgula</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!-- Result Table Start-->
+        <div>
+            {% if request.args.get('table') %}
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Gönderi Türü</th>
+                        <th scope="col">Gönderi Şehri</th>
+                        <th scope="col">Ağırlık</th>
+                        <th scope="col">Yükseklik</th>
+                        <th scope="col">Gönderi Numarası</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">{{ session["table"].id }}</th>
+                        <td> {{ session["table"].freight_type }}</td>
+                        <td> {{ session["table"].departure_city }}</td>
+                        <td> {{ session["table"].weight }}</td>
+                        <td> {{ session["table"].height }}</td>
+                        <td> {{ session["table"].freight_number }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+        <!-- Result Table End -->
+        <!--? our info Start -->
+        <div class="our-info-area pt-70 pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-support"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Bizi Herzaman Arayabilirsiniz</p>
+                                <span>+90 (123) 456-7899</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-clock"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Pazar Günleri Kapalı</p>
+                                <span>Pazar Hariç 8.00 - 18.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-info mb-30">
+                            <div class="info-icon">
+                                <span class="flaticon-place"></span>
+                            </div>
+                            <div class="info-caption">
+                                <p>Beylikdüzü, 34520</p>
+                                <span>Türkiye, İstanbul</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- our info End -->
+    </main>
+{% endblock body %}

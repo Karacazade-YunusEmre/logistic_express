@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Gönderi Oluştur
+{% endblock %}
+
+{% block body %}
+    <main>
+        <!--? slider Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
+                 data-background="../static/assets/img/hero/about.jpg">
+                <div class="container">
+                    <div class="container text-center">
+                        {% include "includes/flash_message.html" %}
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap">
+                                <h2>Gönderi Oluştur</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                                        <li class="breadcrumb-item"><a href="/add_freight">Gönderi Oluştur</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!--? contact-form start -->
+        <section class="contact-form-area section-bg  pt-115 pb-120 fix"
+                 data-background="../static/assets/img/gallery/section_bg02.jpg">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <!-- Contact wrapper -->
+                    <div class="col-xl-8 col-lg-9">
+                        <div class="contact-form-wrapper">
+                            <!-- From tittle -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Section Tittle -->
+                                    <div class="section-tittle mb-50">
+                                        <span>Gönderi Oluştur</span>
+                                        <h2>Nakliye İşlemleriniz için Gönderi Oluşturun</h2>
+                                        <p>Brook presents your services with flexible, convenient and cdpose layouts.
+                                            You can select your favorite layouts & elements for.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- form -->
+                            <form method="post" class="contact-form">
+                                <div class="row ">
+                                    <div class="col-lg-6">
+                                        <div class="select-items">
+                                            <select name="freight_type" id="select1">
+                                                <option value="">Nakliye Türü</option>
+                                                <option value="sehirler_arasi">Şehirler Arası</option>
+                                                <option value="sehir_ici">Şehir İçi</option>
+                                                <option value="deniz">Deniz</option>
+                                                <option value="hava">Hava</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="input-form">
+                                            <input type="text" name="departure_city"
+                                                   placeholder="Nakliye Başlangıç Şehri">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="incoterms" placeholder="Incoterms">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="weight" placeholder="Ağırlık">
+                                        </div>
+                                    </div>
+                                    <!-- Height Width length -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="height" placeholder="Yükseklik">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="width" placeholder="Genişlik">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="input-form">
+                                            <input type="text" name="length" placeholder="uzunluk">
+                                        </div>
+                                    </div>
+                                    <!-- Radio Button -->
+                                    <div class="col-lg-12">
+                                        <div class="radio-wrapper mb-30 mt-15">
+                                            <label>Ekstra Hizmetler:</label>
+                                            <div class="select-radio">
+                                                <div class="radio">
+                                                    <input id="radio-1" value="Lojistik" name="radio_extra" type="radio"
+                                                           checked="">
+                                                    <label for="radio-1" class="radio-label">Lojistik</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-2" value="Hızlı Teslimat" name="radio_extra"
+                                                           type="radio">
+                                                    <label for="radio-2" class="radio-label">Hızlı Teslimat</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-4" value="Sigorta" name="radio_extra" type="radio">
+                                                    <label for="radio-4" class="radio-label">Sigorta</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input id="radio-5" value="Paketleme" name="radio_extra"
+                                                           type="radio">
+                                                    <label for="radio-5" class="radio-label">Paketleme</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="col-lg-12">
+                                        <button name="submit" class="submit-btn">Gönderi Oluşturun</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-form end -->
+    </main>
+{% endblock %}

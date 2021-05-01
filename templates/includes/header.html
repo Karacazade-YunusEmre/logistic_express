@@ -1,0 +1,100 @@
+<!--? Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="../../static/assets/img/logo/loder.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<!-- Header Start -->
+<header>
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-top d-none d-lg-block">
+                <div class="container">
+                    <div class="col-xl-12">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="header-info-left">
+                                <ul>
+                                    <li>Telefon: +90 123 456 7899</li>
+                                    <li>Email: logisticexpress@logisticexpress.com</li>
+                                </ul>
+                            </div>
+                            <div class="header-info-right">
+                                <ul class="header-social">
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom  header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="../../static/assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/about">Hakkımızda</a></li>
+                                            <li><a href="/services">Hizmetlerimiz</a></li>
+                                            <li><a href="/contact">Bize Ulaşın</a></li>
+
+                                            {% if session["logged_in"] %}
+                                                <li><a href="">Bana Özel</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="/add_freight">Gönderi Oluştur</a></li>
+                                                        <li><a href="/search_freight">Gönderi Sorgula</a></li>
+                                                        <li><a href="/my_freight">Gönderilerim</a></li>
+                                                    </ul>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header-btn -->
+                                {% if session["logged_in"] %}
+                                    <div class="main-menu d-none d-lg-block">
+                                        <li><p style="color: wheat;">Hoşgeldiniz
+                                            <small>{{ session["name_lastname"] }}</small></p>
+                                        </li>
+                                    </div>
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="/logout" class="btn header-btn">Çıkış Yap</a>
+                                    </div>
+                                {% else %}
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="/login" class="btn header-btn">Giriş Yap</a>
+                                    </div>
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="/register" class="btn header-btn">Kayıt Ol</a>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
