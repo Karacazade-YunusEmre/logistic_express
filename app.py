@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from passlib.hash import sha256_crypt
+from flask import Flask, request, session, redirect, url_for, render_template, flash
+from passlib.handlers.sha2_crypt import sha256_crypt
 
 from crud import add_request_price, add_message, get_user, add_user, create_freight, get_freight, get_my_freights, \
     get_admin, get_all_users, get_all_freights, get_request_freight, get_all_messages
